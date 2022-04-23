@@ -65,16 +65,16 @@
 
 ## 5. 핵심 기능
   - 동적 분석시 활용하기 위한 특정 기능에 활용되는 데이터 추적 코드 구현
-    - raptor_frida_android_trace.js 기능 : 앱 실행 시 호출되는 함수를 추적해 함수명, 인자 값, 리턴 값 출력
-    - Local_variable_check.py 기능 : 특정 함수에 정의된 지역 변수 값 확인
+    - raptor_frida_android_trace.js 기능 : Frida CLI 환경에서 앱 실행 시 호출되는 함수를 추적해 함수명, 인자 값, 리턴 값 출력
+    - Local_variable_check.py 기능 : Frida CLI 환경에서 특정 함수에 정의된 지역 변수 값 확인
 </br>
 
 ## 6. 핵심 트러블 슈팅
-  - raptor_frida_android_trace.js (앱 실행 시 호출되는 함수 추적)
+  - raptor_frida_android_trace.js   (앱 실행 시 호출되는 함수 추적)
     - 문제점 : 몇몇 앱의 경우 앱 패키지명(ex, com.meitu.makeup)을 기준으로 클래스를 불러올 시 그 클래스의 목록에 앱의 기능에 활용되는 클래스가 포함되어 있지 않는 문제가 발생
     - 연구과제 : 앱마다 주요 기능이 활용되는 클래스의 위치가 다르기 때문에 다양한 앱의 패키지에 대한 분석을 진행하여 앱의 기능이 실질적으로 활용되는 클래스만 불러오기 위한 연구가 필요
   
-  - Local_variable_check.py (특정 함수의 지역변수 추적)
+  - Local_variable_check.py   (특정 함수의 지역변수 추적)
     - 문제점 :
       - 클래스 변수는 불러올 수 있지만 지역 변수는 불러올 수 있는 방법이 없어 출력이 불가능 
       - Java 고유의 문법과 Identifier(ex. synchronized(this){ })를 자바스크립트로 변환하지 못함
