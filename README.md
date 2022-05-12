@@ -36,7 +36,7 @@
   - OS : Kali Linux, Windows
   - Mobile : Noxplayer
   - Analysis tool 
-      - Static analysis : mobSF, JADX, JEB     
+      - Static analysis : mobSF, JADX, GDA, JEB     
       - Dynamic analysis : Frida, Drozer, ADB, Fiddler, WireShark   
    
 #### `프로그래밍 언어`
